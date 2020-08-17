@@ -29,3 +29,6 @@ RUN sudo rosdep init && rosdep update
 RUN wstool init src https://raw.githubusercontent.com/project-march/tutorials/master/doc/getting_started/.rosinstall
 RUN wstool update -t src
 RUN rosdep install -y --from-paths src --ignore-src
+
+ENV HOME /home/thijs
+WORKDIR /home/thijs
