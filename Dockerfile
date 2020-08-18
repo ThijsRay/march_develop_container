@@ -30,5 +30,8 @@ RUN wstool init src https://raw.githubusercontent.com/project-march/tutorials/ma
 RUN wstool update -t src
 RUN rosdep install -y --from-paths src --ignore-src
 
+RUN pip install numpy_ringbuffer pyqtgraph
+RUN sudo apt install ros-melodic-gazebo-ros-control -y
+
 ENV HOME /home/thijs
 WORKDIR /home/thijs
